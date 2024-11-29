@@ -15,19 +15,29 @@ namespace WAD.Server._00016438.DAL.Models
 		[ForeignKey(nameof(StudentId))]
 		public int StudentId { get; set; }
 
+		[Required(ErrorMessage = "Please enter module name")]
+		[StringLength(50, ErrorMessage = "Module name cannot be longer than 50 characters.")]
+		public string ModuleName { get; set; }
+
+
+		[Required(ErrorMessage = "Please enter mark.")]
+		[Range(0, 100, ErrorMessage = "Mark must be between 0 and 100.")]
+		public int Mark { get; set; }
+
+		[Required(ErrorMessage = "Please enter weighting.")]
 		[Range(0, 100, ErrorMessage = "Weighting must be between 0 and 100.")]
 		public int Weighting { get; set; }
 
-		[Range(0, 100, ErrorMessage = "Mark must be between 0 and 100.")]
-		public int Mark { get; set; }
 
 		[Required(ErrorMessage = "Status is required.")]
 		[StringLength(50, ErrorMessage = "Status cannot be longer than 50 characters.")]
 		public string Status { get; set; }
 
+		[Required(ErrorMessage = "Please enter number of attempts.")]
 		[Range(1, int.MaxValue, ErrorMessage = "Attempt must be at least 1.")]
 		public int Attempt { get; set; }
 
-        public Student Student { get; set; }
+
+        public Student? Student { get; set; }
     }
 }

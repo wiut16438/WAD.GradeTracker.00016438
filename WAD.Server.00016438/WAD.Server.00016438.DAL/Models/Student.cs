@@ -29,6 +29,6 @@ namespace WAD.Server._00016438.DAL.Models
 		[Range(3, 6, ErrorMessage = "Level of study must be between 3 and 6.")]
 		public int Level { get; set; }
 
-		public ICollection<Grade> Grades { get; set; }
+		public ICollection<Grade>? Grades { get; set; }
 	}
 }

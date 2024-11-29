@@ -35,6 +35,11 @@ namespace WAD.Server._00016438.DAL.Migrations
                     b.Property<int>("Mark")
                         .HasColumnType("int");
 
+                    b.Property<string>("ModuleName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(50)
