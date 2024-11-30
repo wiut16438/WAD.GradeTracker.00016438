@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WAD.Server._00016438.DAL.DTOs;
 using WAD.Server._00016438.DAL.Models;
 using WAD.Server._00016438.DAL.Repositories;
 
 namespace WAD.Server._00016438.Controllers
 {
+	//00016438
 	[Route("api/[controller]")]
 	[ApiController]
 	public class GradesController : ControllerBase
@@ -56,16 +58,20 @@ namespace WAD.Server._00016438.Controllers
 
 			_mapper.Map(gradeUpdateDto, grade);
 			grade.UpdatedAt = DateTime.UtcNow;
+			grade.Status = gradeUpdateDto.Mark >= 40 ? "Pass" : "Fail";
 
 			await _gradesRepository.UpdateGrade(grade);
 			return NoContent();
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<Grade>> AddGrade(GradeDto gradeDto)
+		public async Task<ActionResult<Grade>> AddGrade([FromBody] GradeDto gradeDto)
 		{
 			var grade = _mapper.Map<Grade>(gradeDto);
+
 			grade.CreatedAt = DateTime.UtcNow;
+			grade.Status = gradeDto.Mark >= 40 ? "Pass" : "Fail";
+
 			await _gradesRepository.CreateGrade(grade);
 			return CreatedAtAction(nameof(GetGrade), new { id = grade.Id }, grade);
 		}
@@ -73,6 +79,13 @@ namespace WAD.Server._00016438.Controllers
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> DeleteGrade(int id)
 		{
+			var grade = await _gradesRepository.GetGradeById(id);
+
+			if (grade == null)
+			{
+				return NotFound();
+			}
+
 			await _gradesRepository.DeleteGrade(id);
 			return NoContent();
 		}

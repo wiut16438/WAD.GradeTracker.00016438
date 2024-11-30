@@ -19,7 +19,7 @@ namespace WAD.Server._00016438.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Course = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Level = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -41,7 +41,6 @@ namespace WAD.Server._00016438.DAL.Migrations
                     Mark = table.Column<int>(type: "int", nullable: false),
                     Weighting = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Attempt = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },

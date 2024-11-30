@@ -6,6 +6,7 @@ using WAD.Server._00016438.DAL.Repositories;
 
 namespace WAD.Server._00016438.Controllers
 {
+	//00016438
 	[Route("api/[controller]")]
 	[ApiController]
 	public class StudentsController : ControllerBase
@@ -61,7 +62,7 @@ namespace WAD.Server._00016438.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<Student>> AddStudent(StudentCreateDto studentCreateDto)
+		public async Task<ActionResult<Student>> AddStudent([FromBody] StudentCreateDto studentCreateDto)
 		{
 			var student = _mapper.Map<Student>(studentCreateDto);
 			student.CreatedAt = DateTime.UtcNow;
@@ -72,6 +73,13 @@ namespace WAD.Server._00016438.Controllers
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> DeleteStudent(int id)
 		{
+			var student = await _studentsRepository.GetStudentById(id);
+
+			if (student == null)
+			{
+				return NotFound();
+			}
+
 			await _studentsRepository.DeleteStudent(id);
 			return NoContent();
 		}

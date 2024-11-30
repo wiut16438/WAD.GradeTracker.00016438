@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WAD.Server.00016438.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f8d59a84b158bf4c20048450b270b84da354c06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+860a8d6e9dd5a3074cebc02b8258c22b0f239fba")]
 [assembly: System.Reflection.AssemblyProductAttribute("WAD.Server.00016438.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WAD.Server.00016438.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

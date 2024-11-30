@@ -12,7 +12,7 @@ using WAD.Server._00016438.DAL.Data;
 namespace WAD.Server._00016438.DAL.Migrations
 {
     [DbContext(typeof(GradeTrackerDbContext))]
-    [Migration("20241130091917_InitialMigration")]
+    [Migration("20241130180443_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -32,9 +32,6 @@ namespace WAD.Server._00016438.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Attempt")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -86,8 +83,8 @@ namespace WAD.Server._00016438.DAL.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()

@@ -35,7 +35,7 @@ namespace WAD.Server._00016438.DAL.Repositories
 
 		public async Task<IEnumerable<Student>> GetAllStudents()
 		{
-			var students = await _dbContext.Students.ToListAsync();
+			var students = await _dbContext.Students.Include(s => s.Grades).ToListAsync();
 			return students;
 		}
 
