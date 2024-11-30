@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WAD.Server._00016438.DAL.Data;
 using WAD.Server._00016438.DAL.Repositories;
+using WAD.Server._00016438.Profiles;
 
 namespace WAD.Server._00016438
 {
@@ -16,6 +17,7 @@ namespace WAD.Server._00016438
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
+			builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 			builder.Services.AddDbContext<GradeTrackerDbContext>(options => 
 			options.UseSqlServer(builder.Configuration.GetConnectionString("GradeTrackerConnection")

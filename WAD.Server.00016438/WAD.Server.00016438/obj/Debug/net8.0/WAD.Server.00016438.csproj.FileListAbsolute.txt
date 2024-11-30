@@ -1,3 +1,4 @@
+C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\appsettings.json
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\WAD.Server.00016438.staticwebassets.runtime.json
@@ -6,6 +7,7 @@ C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\WAD.Server.00016438.runtimeconfig.json
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\WAD.Server.00016438.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\WAD.Server.00016438.pdb
+C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Humanizer.dll
@@ -29,7 +31,6 @@ C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
-C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\User\Desktop\CW_2024-2025\Web_Application_Development\WAD.GradeTracker.00016438\WAD.Server.00016438\WAD.Server.00016438\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll

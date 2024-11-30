@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace WAD.Server._00016438.DAL.Models
 {
-	public class Student
+	public class Student : BaseEntity
 	{
 		public int Id { get; set; }
 

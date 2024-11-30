@@ -41,7 +41,7 @@ namespace WAD.Server._00016438.DAL.Repositories
 
 		public async Task<Student?> GetStudentById(int id)
 		{
-			var student = await _dbContext.Students.FirstOrDefaultAsync(s => s.Id == id);
+			var student = await _dbContext.Students.Include(s => s.Grades).FirstOrDefaultAsync(s => s.Id == id);
 
 			return student;
 		}

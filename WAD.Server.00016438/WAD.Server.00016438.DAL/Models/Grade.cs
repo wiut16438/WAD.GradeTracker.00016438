@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace WAD.Server._00016438.DAL.Models
 {
-    public class Grade
+    public class Grade : BaseEntity
     {
         public int Id { get; set; }
 
@@ -30,7 +31,7 @@ namespace WAD.Server._00016438.DAL.Models
 
 
 		[Required(ErrorMessage = "Status is required.")]
-		[StringLength(50, ErrorMessage = "Status cannot be longer than 50 characters.")]
+		[StringLength(50, ErrorMessage = "Status cann	ot be longer than 50 characters.")]
 		public string Status { get; set; }
 
 		[Required(ErrorMessage = "Please enter number of attempts.")]
@@ -38,6 +39,6 @@ namespace WAD.Server._00016438.DAL.Models
 		public int Attempt { get; set; }
 
 
-        public Student? Student { get; set; }
+		public Student? Student { get; set; }
     }
 }
