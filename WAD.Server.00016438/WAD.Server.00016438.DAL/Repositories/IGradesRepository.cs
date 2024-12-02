@@ -14,5 +14,8 @@ namespace WAD.Server._00016438.DAL.Repositories
 		Task CreateGrade(Grade grade);
 		Task UpdateGrade(Grade grade);
 		Task DeleteGrade(int id);
+
+		//Test mode
+		Task<IEnumerable<Grade>> GetGradesByStudent(int studentId);
 	}
 }

@@ -89,5 +89,19 @@ namespace WAD.Server._00016438.Controllers
 			await _gradesRepository.DeleteGrade(id);
 			return NoContent();
 		}
+
+		//Test Mode
+		[HttpGet("student/{studentId}")]
+		public async Task<ActionResult<IEnumerable<GradeDto>>> GetGradesByStudentId(int studentId)
+		{
+			var grades = await _gradesRepository.GetGradesByStudent(studentId);
+
+			if (!grades.Any())
+			{
+				return NotFound($"No grades found for student ID {studentId}");
+			}
+
+			return Ok(_mapper.Map<IEnumerable<GradeDto>>(grades));
+		}
 	}
 }

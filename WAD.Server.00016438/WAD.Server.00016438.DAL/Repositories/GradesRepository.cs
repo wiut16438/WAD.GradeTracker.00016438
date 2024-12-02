@@ -51,5 +51,12 @@ namespace WAD.Server._00016438.DAL.Repositories
 			_dbContext.Entry(grade).State = EntityState.Modified;
 			await _dbContext.SaveChangesAsync();
 		}
+
+
+		//test mode
+		public async Task<IEnumerable<Grade>> GetGradesByStudent(int studentId)
+		{
+			return await _dbContext.Grades.Where(g => g.Id == studentId).ToListAsync();
+		}
 	}
 }
