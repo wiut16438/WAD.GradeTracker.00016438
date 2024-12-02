@@ -1,7 +1,7 @@
 import { GradeReadType } from './grade.model';
 
 export interface StudentReadType {
-  id: string;
+  id: number;
   firstName: string;
   lastName: string;
   email: string;

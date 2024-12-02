@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Table Styling */
+.student-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table th,
+.student-table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.student-table th {
+  background-color: #4a4a4a; /* Dark gray */
+  color: #fff;
+  font-weight: bold;
+}
+
+.student-table td {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.student-table tr:hover {
+  background-color: #f1f1f1; /* Soft hover effect */
+}
+
+/* Add subtle rounded corners to rows */
+.student-table td,
+.student-table th {
+  border-radius: 4px;
+}
+
+/* Link Styling */
+.link {
+  color: #5a6268; /* Muted blue */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Default Button Colors */
+.add-student {
+  background-color: #6c757d; /* Muted gray */
+  color: #fff;
+}
+
+.add-student:hover {
+  background-color: #5a6268;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.view {
+  background-color: #6c757d; /* Muted gray */
+  color: #fff;
+}
+
+.view:hover {
+  background-color: #5a6268;
+}
+
+.edit {
+  background-color: #adb5bd; /* Soft grayish blue */
+  color: #fff;
+}
+
+.edit:hover {
+  background-color: #8b979f;
+}
+
+.delete {
+  background-color: #dc3545; /* Muted red */
+  color: #fff;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+/* Add subtle hover effect to buttons */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .student-table th,
+  .student-table td {
+    padding: 10px 15px;
+  }
+
+  .student-table {
+    font-size: 0.9rem;
+  }
+
+  .student-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* Make buttons inline in mobile */
+  .action-btn {
+    display: inline-block;
+    margin-right: 5px;
+    width: auto;
+  }
+}

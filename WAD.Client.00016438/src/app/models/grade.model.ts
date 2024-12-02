@@ -1,5 +1,5 @@
 export interface GradeReadType {
-  id: string;
+  id: number;
   moduleName: string;
   mark: number;
   weighting: number;
@@ -8,7 +8,7 @@ export interface GradeReadType {
 }
 
 export interface GradeUpdateType {
-  id: string;
+  id: number;
   moduleName: string;
   mark?: number;
   weighting?: number;
