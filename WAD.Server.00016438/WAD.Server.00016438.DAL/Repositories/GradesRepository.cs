@@ -9,6 +9,7 @@ using WAD.Server._00016438.DAL.Models;
 
 namespace WAD.Server._00016438.DAL.Repositories
 {
+	//Student Id: 00016438
 	public class GradesRepository : IGradesRepository
 	{
 		private readonly GradeTrackerDbContext _dbContext;
@@ -52,8 +53,6 @@ namespace WAD.Server._00016438.DAL.Repositories
 			await _dbContext.SaveChangesAsync();
 		}
 
-
-		//test mode
 		public async Task<IEnumerable<Grade>> GetGradesByStudent(int studentId)
 		{
 			return await _dbContext.Grades.Where(g => g.StudentId == studentId).ToListAsync();

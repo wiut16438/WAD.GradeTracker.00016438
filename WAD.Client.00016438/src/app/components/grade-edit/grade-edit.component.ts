@@ -1,3 +1,5 @@
+//Student Id: 00016438
+
 import { Component, inject, OnInit } from '@angular/core';
 import { GradeService } from '../../services/grade.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -56,7 +58,7 @@ export class GradeEditComponent implements OnInit {
     }
   }
 
-  updateGrade(): void {
+  updateGrade() {
     if (this.gradeForm.valid) {
       const updatedGrade: GradeUpdateType = {
         id: this.gradeId,

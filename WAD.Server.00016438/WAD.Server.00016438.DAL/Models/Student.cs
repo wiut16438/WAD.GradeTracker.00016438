@@ -7,7 +7,7 @@ using WAD.Server._00016438.DAL.DTOs;
 
 namespace WAD.Server._00016438.DAL.Models
 {
-	//00016438
+	//Student Id: 00016438
 	public class Student : BaseEntity
 	{
 		public int Id { get; set; }

@@ -1,11 +1,3 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fafb;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
 .notfound-container {
   text-align: center;
   padding: 50px 20px;
@@ -19,13 +11,13 @@ body {
 
 .notfound-container h1 {
   font-size: 3rem;
-  color: #dc3545; /* Red color for the error code */
+  color: #dc3545;
   margin-bottom: 20px;
 }
 
 .notfound-container p {
   font-size: 1.2rem;
-  color: #6c757d; /* Subdued text color */
+  color: #6c757d;
   margin-bottom: 30px;
 }
 

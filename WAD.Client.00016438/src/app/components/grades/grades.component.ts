@@ -1,3 +1,5 @@
+//Student Id: 00016438
+
 import { Component, inject, OnInit } from '@angular/core';
 import { GradeService } from '../../services/grade.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -18,7 +20,6 @@ export class GradesComponent implements OnInit {
 
   grades: GradeReadType[] = [];
   studentId!: number;
-  loading: boolean = true;
   errorMessage: string = '';
 
   ngOnInit() {
@@ -32,18 +33,22 @@ export class GradesComponent implements OnInit {
     this.gradeService.getByStudentId(studentId).subscribe({
       next: (grades) => {
         this.grades = grades;
-        this.loading = false;
       },
       error: () => {
         this.errorMessage = 'No grades available';
-        this.loading = false;
       },
     });
   }
 
   deleteGrade(id: number) {
-    this.gradeService.delete(id).subscribe(() => {
-      this.grades = this.grades.filter((s) => s.id !== id);
+    this.gradeService.delete(id).subscribe({
+      next: () => {
+        this.grades = this.grades.filter((s) => s.id !== id);
+        alert('Grade successfully deleted');
+      },
+      error: () => {
+        alert('Failed to delete the grade. Please try again');
+      },
     });
   }
 }

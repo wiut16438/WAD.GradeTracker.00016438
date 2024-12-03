@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace WAD.Server._00016438.DAL.DTOs
 {
+	//Student Id: 00016438
 	public class GradeDto
 	{
 		public int Id { get; set; }

@@ -6,10 +6,6 @@
   >
     Add Grade
   </a>
-
-  <div *ngIf="loading" class="no-data">
-    <p>Loading grades...</p>
-  </div>
   <div *ngIf="errorMessage" class="no-data">
     <p>{{ errorMessage }}</p>
   </div>
@@ -45,7 +41,7 @@
       </tbody>
     </table>
   </div>
-  <div *ngIf="grades.length === 0 && !loading && !errorMessage" class="no-data">
+  <div *ngIf="grades.length === 0 && !errorMessage" class="no-data">
     <p>No grades available for this student.</p>
   </div>
 </div>
