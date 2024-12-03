@@ -56,7 +56,7 @@ namespace WAD.Server._00016438.DAL.Repositories
 		//test mode
 		public async Task<IEnumerable<Grade>> GetGradesByStudent(int studentId)
 		{
-			return await _dbContext.Grades.Where(g => g.Id == studentId).ToListAsync();
+			return await _dbContext.Grades.Where(g => g.StudentId == studentId).ToListAsync();
 		}
 	}
 }

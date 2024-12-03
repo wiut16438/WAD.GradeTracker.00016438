@@ -17,8 +17,10 @@ namespace WAD.Server._00016438.Profiles
 
             CreateMap<Grade, GradeUpdateDto>();
             CreateMap<Grade, GradeDto>();
+            CreateMap<Grade, GradeCreateDto>();
             CreateMap<GradeUpdateDto, Grade>();
             CreateMap<GradeDto, Grade>();
+            CreateMap<GradeCreateDto, Grade>();
 
 		}
     }

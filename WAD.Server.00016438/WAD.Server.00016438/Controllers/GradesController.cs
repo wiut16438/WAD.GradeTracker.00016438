@@ -65,14 +65,14 @@ namespace WAD.Server._00016438.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<Grade>> AddGrade([FromBody] GradeDto gradeDto)
+		public async Task<ActionResult<Grade>> AddGrade([FromBody] GradeCreateDto gradeCreateDto)
 		{
-			var grade = _mapper.Map<Grade>(gradeDto);
+			var grade = _mapper.Map<Grade>(gradeCreateDto);
 
 			grade.CreatedAt = DateTime.UtcNow;
-			grade.Status = gradeDto.Mark >= 40 ? "Pass" : "Fail";
+			grade.Status = gradeCreateDto.Mark >= 40 ? "Pass" : "Fail";
 
-			await _gradesRepository.CreateGrade(grade);
+			await _gradesRepository.CreateGrade(grade);	
 			return CreatedAtAction(nameof(GetGrade), new { id = grade.Id }, grade);
 		}
 

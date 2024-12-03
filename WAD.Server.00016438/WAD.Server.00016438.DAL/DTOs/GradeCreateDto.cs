@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace WAD.Server._00016438.DAL.DTOs
 {
-	public class GradeDto
+	public class GradeCreateDto
 	{
-		public int Id { get; set; }
-
 		[Required(ErrorMessage = "Module name is required.")]
 		[StringLength(50, ErrorMessage = "Module name cannot exceed 50 characters.")]
 		public string ModuleName { get; set; }
@@ -23,11 +21,7 @@ namespace WAD.Server._00016438.DAL.DTOs
 		[Range(0, 100, ErrorMessage = "Weighting must be between 0 and 100.")]
 		public int Weighting { get; set; }
 
-		[Required(ErrorMessage = "Status is required.")]
-		[StringLength(10, ErrorMessage = "Status cannot exceed 50 characters.")]
-		public string Status { get; set; }
 
-		
 		[Required(ErrorMessage = "StudentId is required.")]
 		public int StudentId { get; set; }
 	}
