@@ -1,0 +1,232 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table th,
+.student-table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.student-table th {
+  background-color: #4a4a4a;
+  color: #fff;
+  font-weight: bold;
+}
+
+.student-table td {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.student-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.student-table td,
+.student-table th {
+  border-radius: 4px;
+}
+
+.link {
+  color: #5a6268;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-student {
+  background-color: #4a90e2; /* Match the color of buttons in the second style */
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.add-student:hover {
+  background-color: #357ab7;
+  transform: scale(1.05);
+}
+
+.add-student:active {
+  background-color: #2c699f;
+  transform: scale(0.98);
+}
+
+.add-student:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+.edit {
+  background-color: #4a90e2; /* Same as add-student and btn-primary */
+  color: #fff;
+}
+
+.edit:hover {
+  background-color: #8b979f;
+  transform: scale(1.05);
+}
+
+.edit:focus {
+  outline: none;
+}
+
+.edit:active {
+  background-color: #6c757d;
+  transform: scale(1);
+}
+
+.btn-primary {
+  background-color: #007bff; /* Consistent blue */
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  margin-left: 10px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.view {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.view:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .student-table th,
+  .student-table td {
+    padding: 10px 15px;
+  }
+
+  .student-table {
+    font-size: 0.9rem;
+  }
+
+  .student-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .action-btn {
+    display: inline-block;
+    margin-right: 5px;
+    width: auto;
+  }
+}
+
+.no-data {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-data p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.no-data button {
+  margin-top: 10px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.no-data button:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}

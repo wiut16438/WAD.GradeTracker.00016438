@@ -7,6 +7,13 @@ export interface GradeReadType {
   studentId: number;
 }
 
+export interface GradeCreateType {
+  moduleName: string;
+  mark: number;
+  weighting: number;
+  studentId: number;
+}
+
 export interface GradeUpdateType {
   id: number;
   moduleName: string;

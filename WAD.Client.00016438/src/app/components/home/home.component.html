@@ -3,7 +3,7 @@
   <button class="btn add-student mb-3" (click)="addStudent()">
     Add Student
   </button>
-  <div class="table-responsive">
+  <div class="table-responsive" *ngIf="students && students.length > 0">
     <table class="student-table">
       <thead>
         <tr>
@@ -25,9 +25,16 @@
           <td>{{ student.email }}</td>
           <td>{{ student.course }}</td>
           <td>{{ student.level }}</td>
-          <td><a href="grades" class="link">View Grades</a></td>
           <td>
-            <button class="btn action-btn edit" (click)="addStudent()">
+            <a [routerLink]="['/students', student.id, 'grades']" class="link"
+              >View Grades</a
+            >
+          </td>
+          <td>
+            <button
+              class="btn action-btn edit"
+              [routerLink]="['/students/edit', student.id]"
+            >
               Edit
             </button>
             <button
@@ -40,5 +47,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="no-data" *ngIf="!students || students.length === 0">
+    <p>
+      No students available. Please add a new student or make sure that server
+      is running.
+    </p>
   </div>
 </div>

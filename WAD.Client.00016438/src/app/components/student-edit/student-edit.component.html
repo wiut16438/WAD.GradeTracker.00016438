@@ -1,6 +1,6 @@
 <div class="container mt-4">
-  <h2>Student</h2>
-  <form [formGroup]="addForm" (ngSubmit)="addStudent()">
+  <h2>Edit Student</h2>
+  <form [formGroup]="editForm" (ngSubmit)="updateStudent()">
     <div class="form-group">
       <label for="firstName">Name</label>
       <input
@@ -39,7 +39,7 @@
         formControlName="course"
         required
       >
-        <option selected value="BIS">BIS</option>
+        <option value="BIS">BIS</option>
         <option value="Finance">Finance</option>
         <option value="Law">Law</option>
         <option value="Business Management">Business Management</option>
@@ -52,13 +52,13 @@
       <select id="level" class="form-control" formControlName="level" required>
         <option value="3">3</option>
         <option value="4">4</option>
-        <option selected value="5">5</option>
+        <option value="5">5</option>
         <option value="6">6</option>
       </select>
     </div>
 
-    <button class="btn btn-primary" [disabled]="addForm.invalid" type="submit">
-      Save
+    <button class="btn btn-primary" [disabled]="editForm.invalid" type="submit">
+      Save Changes
     </button>
   </form>
 </div>

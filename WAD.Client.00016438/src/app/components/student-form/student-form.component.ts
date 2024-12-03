@@ -5,7 +5,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { StudentCreateType } from '../../models/student.model';
 import { StudentService } from '../../services/student.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';

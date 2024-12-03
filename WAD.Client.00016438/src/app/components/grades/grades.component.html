@@ -1,1 +1,51 @@
-<p>grades works!</p>
+<div class="container mt-4">
+  <h2>Grades</h2>
+  <a
+    [routerLink]="['/students', studentId, 'grades', 'add']"
+    class="btn btn-primary add-student"
+  >
+    Add Grade
+  </a>
+
+  <div *ngIf="loading" class="no-data">
+    <p>Loading grades...</p>
+  </div>
+  <div *ngIf="errorMessage" class="no-data">
+    <p>{{ errorMessage }}</p>
+  </div>
+  <div *ngIf="grades.length > 0" class="table-responsive">
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th>Module Name</th>
+          <th>Mark</th>
+          <th>Weighting</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let grade of grades">
+          <td>{{ grade.moduleName }}</td>
+          <td>{{ grade.mark }}</td>
+          <td>{{ grade.weighting }}%</td>
+          <td>{{ grade.status }}</td>
+          <td>
+            <a
+              [routerLink]="['/students/grades/edit', grade.id]"
+              class="btn btn-primary edit"
+            >
+              Edit
+            </a>
+            <a class="btn btn-danger edit" (click)="deleteGrade(grade.id)">
+              Delete
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="grades.length === 0 && !loading && !errorMessage" class="no-data">
+    <p>No grades available for this student.</p>
+  </div>
+</div>

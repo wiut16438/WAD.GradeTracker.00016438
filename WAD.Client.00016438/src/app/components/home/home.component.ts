@@ -34,6 +34,6 @@ export class HomeComponent {
   }
 
   addStudent(): void {
-    this.router.navigate(['/form']);
+    this.router.navigate(['students/add']);
   }
 }
