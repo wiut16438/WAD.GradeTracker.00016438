@@ -45,22 +45,22 @@ To run this application, please make sure that you have installed the following:
     - In **Solution Explorer**, right-click the solution name.
     - Select **Restore NuGet Packages**. This will download all necessary dependencies for the project.
   
-  **In case required**
+  **In case required**:
     - Configure Connection Strings by opening the `appsettings.json`
     - Update the connection string with your database credentials
   
-  **If the database is not set up**
+  **If the database is not set up**:
     - Open the **Package Manager Console** (`Tools > NuGet Package Manager > Package Manager Console`)
     - Select **WIUT.Server.00016438.DAL** as your default project
     - Run the following command to apply migrations:
 
-    ```powershell
-   Update-Database
-   ```
+    ```bash
+    Update-Database
+    ```
 
-   - If migrations need to be created, use:
+   If migrations need to be created, use:
    
-     ```powershell
+     ```bash
      Add-Migration InitialMigration
      Update-Database
      ```
