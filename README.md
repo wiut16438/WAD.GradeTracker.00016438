@@ -94,7 +94,7 @@ To run this application, please make sure that you have installed the following:
 
 ## Additional Info
 
-- **Demo Video**: 
+- **Demo Video**: https://drive.google.com/file/d/1ceI4v5tCd-3KnhYVvUd4qq1O2o12rjae/view?usp=sharing
 - **External Libraries Used**:
   - Entity Framework Core (v9.0.0)
   - EF Core Sql Server (v9.0.0)
