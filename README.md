@@ -68,7 +68,7 @@ To run this application, please make sure that you have installed the following:
 3. **Frontend Setup**:
    - Navigate to the frontend folder:
      ```bash
-     cd frontend
+     cd WAD.Client.00016438
      ```
    - Install dependencies:
      ```bash
